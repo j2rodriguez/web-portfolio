@@ -29,3 +29,31 @@ hr {
   border: 1px solid #334155;
   margin: 30px 0;
 }
+.btn-primary {
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background: #facc15;
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-outline {
+  padding: 10px 20px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+}
