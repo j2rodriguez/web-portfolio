@@ -1,0 +1,65 @@
+[
+    {
+        "modelo": "LR",
+        "metricas": {
+            "Recall": 0.96875,
+            "Precision": 1.0,
+            "F1": 0.9841269841269841,
+            "AUC": 1.0,
+            "BalancedAcc": 0.984375,
+            "Specificity": 1.0,
+            "CM": {
+                "TN": 54,
+                "FP": 0,
+                "FN": 1,
+                "TP": 31
+            },
+            "ThresholdClinical": 0.494,
+            "Recall@Th": 1.0,
+            "Spec@Th": 1.0,
+            "Prec@Th": 1.0
+        }
+    },
+    {
+        "modelo": "SVM",
+        "metricas": {
+            "Recall": 0.9375,
+            "Precision": 1.0,
+            "F1": 0.967741935483871,
+            "AUC": 0.9994212962962963,
+            "BalancedAcc": 0.96875,
+            "Specificity": 1.0,
+            "CM": {
+                "TN": 54,
+                "FP": 0,
+                "FN": 2,
+                "TP": 30
+            },
+            "ThresholdClinical": 0.29,
+            "Recall@Th": 1.0,
+            "Spec@Th": 0.9814814814814815,
+            "Prec@Th": 0.9696969696969697
+        }
+    },
+    {
+        "modelo": "RF",
+        "metricas": {
+            "Recall": 0.9375,
+            "Precision": 1.0,
+            "F1": 0.967741935483871,
+            "AUC": 0.9976851851851851,
+            "BalancedAcc": 0.96875,
+            "Specificity": 1.0,
+            "CM": {
+                "TN": 54,
+                "FP": 0,
+                "FN": 2,
+                "TP": 30
+            },
+            "ThresholdClinical": 0.016,
+            "Recall@Th": 1.0,
+            "Spec@Th": 0.9074074074074074,
+            "Prec@Th": 0.8648648648648649
+        }
+    }
+]
