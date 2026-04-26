@@ -161,6 +161,7 @@ footer {
 .nav-links a:hover {
   color: #38bdf8;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -177,12 +178,28 @@ a {
 }
 
 .card {
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.card a {
+  align-self: flex-end;
+  margin-top: 15px;
 }
 
 .card:hover {
   transform: translateY(-5px);
   border-color: #38bdf8;
+}
+
+.grid {
+  align-items: stretch;
 }
 
 .navbar {
