@@ -87,3 +87,32 @@ hr {
     grid-template-columns: 1fr;
   }
 }
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.eyebrow {
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #facc15;
+  margin-top: 10px;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 18px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
