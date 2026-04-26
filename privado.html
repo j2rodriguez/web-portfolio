@@ -130,16 +130,17 @@
     <h2>Laboratorio de Deep Learning</h2>
     
       <div class="grid">
-  
+
+      <!-- PROYECTO -->
       <div class="card">
         <h3>Detección de fracturas en radiografías</h3>
         <p>
-          Proyecto de clasificación de imágenes médicas mediante redes neuronales
-          convolucionales (CNN) en PyTorch.
+          Proyecto de visión artificial basado en redes neuronales convolucionales (CNN)
+          para la detección automática de fracturas óseas.
         </p>
   
         <p class="highlight">
-          Precisión alcanzada: ~94%
+          Accuracy: 0.76 · Mejor CV: 0.79 · F1 Macro: 0.75
         </p>
   
         <a href="docs/deep-learning/memoria-dl.pdf" target="_blank" class="btn-primary">
@@ -147,10 +148,12 @@
         </a>
       </div>
   
+      <!-- DATASET -->
       <div class="card">
         <h3>Dataset</h3>
         <p>
-          Dataset de radiografías con más de 9000 imágenes clasificadas en fracturado y no fracturado.
+          Más de 9000 radiografías clasificadas con técnicas de augmentación
+          para mejorar la generalización del modelo.
         </p>
   
         <a href="docs/deep-learning/dataset-info.txt" target="_blank" class="btn-outline">
@@ -158,21 +161,11 @@
         </a>
       </div>
   
-      <div class="card">
-        <h3>Resultados y evaluación</h3>
-        <p>
-          Evaluación del modelo, métricas, matriz de confusión y análisis de predicciones.
-        </p>
-  
-        <a href="docs/deep-learning/carga de los datos.txt" target="_blank" class="btn-outline">
-          Ver pipeline técnico
-        </a>
-      </div>
-  
+      <!-- PIPELINE -->
       <div class="card">
         <h3>Pipeline completo</h3>
         <p>
-          Proceso completo desde el preprocesado del dataset hasta el entrenamiento del modelo.
+          Preparación de datos, balanceo de clases, entrenamiento y evaluación del modelo.
         </p>
   
         <a href="docs/deep-learning/preprocesado-dataset.ipynb" target="_blank" class="btn-outline">
@@ -181,6 +174,54 @@
   
         <a href="docs/deep-learning/modelo-cnn.ipynb" target="_blank" class="btn-outline">
           Modelo CNN
+        </a>
+      </div>
+  
+      <!-- RESULTADOS -->
+      <div class="card">
+        <h3>Resultados y evaluación</h3>
+        <p>
+          Métricas de clasificación, matriz de confusión y validación cruzada.
+        </p>
+  
+        <a href="docs/deep-learning/carga de los datos.txt" target="_blank" class="btn-outline">
+          Ver pipeline técnico
+        </a>
+      </div>
+  
+      <!-- VISUAL PRINCIPAL -->
+      <div class="card">
+        <h3>Curva de aprendizaje</h3>
+  
+        <img src="docs/deep-learning/curva-perdida-dl.png" class="project-image">
+  
+        <p style="font-size:14px;">
+          Evolución de la pérdida durante el entrenamiento del modelo.
+        </p>
+      </div>
+  
+      <!-- VISUALES SECUNDARIOS -->
+      <div class="card">
+        <h3>Visualización del modelo</h3>
+  
+        <a href="docs/deep-learning/matriz-confusion-dl.png" target="_blank" class="btn-outline">
+          Matriz de confusión
+        </a>
+  
+        <a href="docs/deep-learning/arquitectura-cnn.png" target="_blank" class="btn-outline">
+          Arquitectura CNN
+        </a>
+  
+        <a href="docs/deep-learning/transformaciones-dataset.png" target="_blank" class="btn-outline">
+          Transformaciones
+        </a>
+  
+        <a href="docs/deep-learning/ejemplos-radiografias.png" target="_blank" class="btn-outline">
+          Radiografías
+        </a>
+  
+        <a href="docs/deep-learning/validacion-cruzada-dl.png" target="_blank" class="btn-outline">
+          Validación cruzada
         </a>
       </div>
     
