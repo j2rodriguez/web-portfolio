@@ -1,0 +1,11 @@
+{
+    "evento": "EDA_COMPLETO",
+    "timestamp": "20260118_205017",
+    "n_filas": 569,
+    "n_columnas": 32,
+    "rutas_generadas": "C:/Users/j2rod/Documents/MASTER IA/Proyecto/breast+cancer+wisconsin+diagnostic/models/EDA_AUTO_20260118_205017\\EDA_COMPLETO_20260118_205017",
+    "exportaciones": {
+        "estadistica": "C:/Users/j2rod/Documents/MASTER IA/Proyecto/breast+cancer+wisconsin+diagnostic/models/EDA_AUTO_20260118_205017\\EDA_COMPLETO_20260118_205017\\estadistica_descriptiva.json",
+        "correlacion_json": "C:/Users/j2rod/Documents/MASTER IA/Proyecto/breast+cancer+wisconsin+diagnostic/models/EDA_AUTO_20260118_205017\\EDA_COMPLETO_20260118_205017\\correlacion.json"
+    }
+}
