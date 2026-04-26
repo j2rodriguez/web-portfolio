@@ -188,3 +188,8 @@ a {
 .navbar {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
+
+.card .btn-outline {
+  display: inline-block;
+  margin-top: 15px;
+}
