@@ -131,19 +131,19 @@ footer {
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  max-width: 100%;
   background: #020617;
   border-bottom: 1px solid #334155;
   z-index: 1000;
-  padding: 0 20px;
 }
 
 .nav-container {
-  max-width: 900px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 15px 20px;
   align-items: center;
 }
 
