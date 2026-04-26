@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-  
-<header class="hero">
-  <p class="eyebrow">Área técnica</p>
 
-  <h1>Laboratorio de Machine Learning</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área técnica | Juan Rodríguez</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-  <p class="hero-text">
-    Espacio destinado a análisis, experimentación y evolución de modelos.
-  </p>
-
-  <div class="buttons">
-    <a href="index.html" class="btn-secondary">Volver</a>
-    <a href="#" class="btn-primary">Explorar modelos</a>
-  </div>
-</header>
-  
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <span class="logo">JR</span>
+
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="#ml">ML</a>
+      <a href="#notebooks">Notebooks</a>
+      <a href="#datos">Datos</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENEDOR -->
 <div class="container">
 
+  <!-- HERO -->
   <header class="hero">
     <p class="eyebrow">Área técnica</p>
-    <h1>Laboratorio de proyectos</h1>
+
+    <h1>Laboratorio de Machine Learning</h1>
+
     <p class="hero-text">
-      Espacio destinado a documentación técnica, pruebas de modelos,
-      notebooks, datasets y evolución de proyectos.
+      Espacio destinado a análisis, experimentación y evolución de modelos.
     </p>
 
-    <a href="index.html" class="btn-outline">Volver a la web pública</a>
+    <div class="buttons">
+      <a href="index.html" class="btn-secondary">Volver</a>
+      <a href="#ml" class="btn-primary">Explorar modelos</a>
+    </div>
   </header>
 
   <hr>
 
-  <section>
+  <!-- LABORATORIO -->
+  <section id="ml">
     <h2>Laboratorio de Machine Learning</h2>
 
     <div class="grid">
+
       <div class="card">
         <h3>Notebooks</h3>
         <p>Análisis exploratorio, limpieza de datos y pruebas de entrenamiento.</p>
@@ -60,6 +74,7 @@
         <p>Memorias, anexos técnicos y evolución del proyecto.</p>
         <a href="#" class="btn-outline">Próximamente</a>
       </div>
+
     </div>
   </section>
 
