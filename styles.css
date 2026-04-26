@@ -5,13 +5,7 @@ body {
   line-height: 1.6;
   padding-top: 70px;
 
-  background:
-    linear-gradient(rgba(2,6,23,0.90), rgba(2,6,23,0.96)),
-    url("background.png");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: #020617;
 }
 
 .container {
@@ -22,6 +16,10 @@ body {
 
 h1 {
   color: #38bdf8;
+}
+
+.hero h1 {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
 
 h2 {
@@ -102,7 +100,17 @@ hr {
 
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
+
+  background: linear-gradient(
+      rgba(2, 6, 23, 0.85),
+      rgba(2, 6, 23, 0.95)
+    ),
+    url("background.png");
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
 }
 
 .eyebrow {
