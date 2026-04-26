@@ -89,37 +89,83 @@
 
      <div class="grid">
 
-      <div class="card">
-        <h3>Proyecto TFM</h3>
-        <p>Optimización de modelos de regresión logística para la predicción de cáncer.</p>
-        <a href="memoria-proyecto-master.pdf" target="_blank" class="btn-primary">
-          Ver memoria
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Notebook principal</h3>
-        <p>Desarrollo completo del modelo, entrenamiento y evaluación.</p>
-        <a href="docs/master-ml/Proyecto_TMF_JuanJoseRodriguezPuente.ipynb" target="_blank" class="btn-outline">
-          Ver código
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Análisis exploratorio (EDA)</h3>
-        <p>Distribución de variables, correlaciones y análisis de datos.</p>
-        <a href="docs/master-ml/estadistica_descriptiva.json" target="_blank" class="btn-outline">
-          Ver datos
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Resultados y visualización</h3>
-        <p>Paneles comparativos y ranking de modelos.</p>
-        <a href="docs/master-ml/panel.pdf" target="_blank" class="btn-outline">
-          Ver panel
-        </a>
-      </div>
+        <div class="card">
+          <h3>Proyecto TFM</h3>
+          <p>
+            Optimización de modelos de clasificación para predicción de cáncer,
+            con especial atención al ajuste del umbral clínico.
+          </p>
+    
+          <p class="highlight">
+            AUC: 1.0 · Precision: 1.0 · Recall clínico: 1.0
+          </p>
+    
+          <a href="memoria-proyecto-master.pdf" target="_blank" class="btn-primary">
+            Ver memoria
+          </a>
+        </div>
+    
+        <div class="card">
+          <h3>Evaluación de modelos</h3>
+          <p>
+            Comparativa entre SVM, regresión logística y Random Forest mediante
+            recall, precision, F1, AUC y balanced accuracy.
+          </p>
+    
+          <a href="docs/master-ml/ranking.json" target="_blank" class="btn-outline">
+            Ver métricas
+          </a>
+        </div>
+    
+        <div class="card">
+          <h3>Optimización clínica</h3>
+          <p>
+            Ajuste del threshold para reducir falsos negativos y priorizar sensibilidad
+            en un contexto de diagnóstico médico.
+          </p>
+    
+          <a href="docs/master-ml/threshold.json" target="_blank" class="btn-outline">
+            Ver threshold
+          </a>
+        </div>
+    
+        <div class="card">
+          <h3>Notebook principal</h3>
+          <p>
+            Desarrollo completo del pipeline: limpieza, normalización, entrenamiento,
+            evaluación e inferencia.
+          </p>
+    
+          <a href="docs/master-ml/Proyecto_TMF_JuanJoseRodriguezPuente.ipynb" target="_blank" class="btn-outline">
+            Ver código
+          </a>
+        </div>
+    
+        <div class="card">
+          <h3>Análisis exploratorio</h3>
+          <p>
+            Distribuciones, boxplots, correlaciones y relaciones entre variables
+            para comprender el comportamiento del dataset.
+          </p>
+    
+          <a href="docs/master-ml/estadistica_descriptiva.json" target="_blank" class="btn-outline">
+            Ver estadística
+          </a>
+        </div>
+    
+        <div class="card">
+          <h3>Resultados visuales</h3>
+          <p>
+            Paneles comparativos y ranking visual de modelos por AUC.
+          </p>
+    
+          <img src="docs/master-ml/panel_ranking_auto_20260119_012231.png" class="project-image">
+    
+          <a href="docs/master-ml/panel.pdf" target="_blank" class="btn-outline">
+            Ver panel
+          </a>
+        </div>
+       
      </div>
   </section>
   
