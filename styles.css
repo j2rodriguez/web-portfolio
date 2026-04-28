@@ -83,6 +83,19 @@ hr {
   border: 1px solid #334155;
 }
 
+.card-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .card h3 {
   color: #38bdf8;
   margin-top: 0;
