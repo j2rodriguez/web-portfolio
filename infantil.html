@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infantil | Umbrela Teams</title>
+
+  <style>
+    :root {
+      --cream: #fff8ef;
+      --yellow: #ffe6a7;
+      --coral: #ff7f6e;
+      --coral-dark: #d95f52;
+      --mint: #82d8c2;
+      --blue: #7bb7e5;
+      --pink: #f7a7c3;
+      --text: #423831;
+      --text-soft: #77685f;
+      --white: #ffffff;
+      --shadow: 0 22px 55px rgba(66, 56, 49, 0.16);
+      --radius: 30px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1120px, calc(100% - 32px));
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: rgba(255, 248, 239, 0.84);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 32px rgba(66, 56, 49, 0.08);
+    }
+
+    .brand {
+      font-weight: 900;
+      color: var(--coral-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 0.92rem;
+      color: var(--text-soft);
+    }
+
+    .nav-links a:hover {
+      color: var(--coral-dark);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+      padding: 130px max(24px, calc((100vw - 1120px) / 2)) 80px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 230, 167, 0.95), transparent 28%),
+        radial-gradient(circle at 80% 15%, rgba(130, 216, 194, 0.45), transparent 28%),
+        radial-gradient(circle at 70% 80%, rgba(247, 167, 195, 0.38), transparent 30%),
+        linear-gradient(135deg, #fff8ef, #fff1df);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      margin-bottom: 20px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 127, 110, 0.12);
+      border: 1px solid rgba(255, 127, 110, 0.26);
+      color: var(--coral-dark);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    h1 {
+      font-size: clamp(3.4rem, 9vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.08em;
+      margin-bottom: 26px;
+    }
+
+    h1 span {
+      color: var(--coral);
+    }
+
+    .lead {
+      max-width: 650px;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      color: var(--text-soft);
+      margin-bottom: 34px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--coral);
+      color: white;
+      box-shadow: 0 16px 32px rgba(255, 127, 110, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(66, 56, 49, 0.12);
+      color: var(--text);
+    }
+
+    .hero-card {
+      min-height: 540px;
+      border-radius: 42px;
+      background:
+        linear-gradient(rgba(66,56,49,0.02), rgba(66,56,49,0.18)),
+        url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80') center/cover;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .floating {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255, 248, 239, 0.88);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 20px 45px rgba(66, 56, 49, 0.16);
+    }
+
+    .floating strong {
+      display: block;
+      color: var(--coral-dark);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    section {
+      padding: 96px max(24px, calc((100vw - 1120px) / 2));
+    }
+
+    .section-title {
+      max-width: 780px;
+      margin-bottom: 44px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2.2rem, 4vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin-bottom: 18px;
+    }
+
+    .section-title p {
+      color: var(--text-soft);
+      font-size: 1.08rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(66, 56, 49, 0.07);
+      box-shadow: 0 16px 42px rgba(66, 56, 49, 0.09);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 18px;
+      background: var(--yellow);
+      color: var(--coral-dark);
+      font-size: 1.45rem;
+    }
+
+    .card:nth-child(2) .icon {
+      background: rgba(130, 216, 194, 0.38);
+    }
+
+    .card:nth-child(3) .icon {
+      background: rgba(123, 183, 229, 0.32);
+    }
+
+    .card:nth-child(4) .icon {
+      background: rgba(247, 167, 195, 0.34);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .card p {
+      color: var(--text-soft);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .image-panel {
+      min-height: 460px;
+      border-radius: 38px;
+      background:
+        linear-gradient(rgba(66,56,49,0.02), rgba(66,56,49,0.18)),
+        url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=80') center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-panel {
+      padding: 44px;
+      border-radius: 38px;
+      background: var(--coral);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-panel h2 {
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin-bottom: 22px;
+    }
+
+    .quote-panel p {
+      color: rgba(255,255,255,0.86);
+      font-size: 1.08rem;
+    }
+
+    .band {
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255, 230, 167, 0.7), transparent 26%),
+        radial-gradient(circle at 90% 20%, rgba(130, 216, 194, 0.4), transparent 26%),
+        #fff1df;
+    }
+
+    .final {
+      min-height: 70vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(66,56,49,0.08), rgba(66,56,49,0.42)),
+        url('https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&w=1600&q=80') center/cover;
+      color: white;
+    }
+
+    .final h2 {
+      max-width: 920px;
+      font-size: clamp(2.5rem, 6vw, 5.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      margin-bottom: 22px;
+      text-shadow: 0 12px 30px rgba(0,0,0,0.24);
+    }
+
+    .final p {
+      font-size: 1.22rem;
+      text-shadow: 0 8px 22px rgba(0,0,0,0.22);
+    }
+
+    footer {
+      padding: 34px 24px;
+      text-align: center;
+      background: var(--text);
+      color: rgba(255,255,255,0.72);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 420px;
+      }
+
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="umbrela.html">Umbrela Teams</a>
+    <div class="nav-links">
+      <a href="#experiencias">Experiencias</a>
+      <a href="#confianza">Confianza</a>
+      <a href="#vision">Visión</a>
+      <a href="umbrela.html">Volver</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Rama inicial · Eventos infantiles</div>
+      <h1>Infantil <span>Experience</span></h1>
+      <p class="lead">
+        Cumpleaños, animación y experiencias familiares pensadas para que los niños disfruten y los adultos estén tranquilos.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#experiencias">Ver ideas</a>
+        <a class="btn btn-secondary" href="umbrela.html">Volver a Umbrela</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="floating">
+        <strong>Diversión con organización y confianza.</strong>
+        <p>Momentos alegres, cuidados y adaptados a cada edad, familia y celebración.</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="experiencias">
+    <div class="section-title">
+      <h2>Experiencias para recordar con una sonrisa.</h2>
+      <p>
+        La línea infantil nace para crear celebraciones cercanas, dinámicas y visuales, combinando diversión, decoración y coordinación.
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <div class="icon">🎈</div>
+        <h3>Cumpleaños temáticos</h3>
+        <p>Celebraciones adaptadas a gustos, edades y estilos, con una imagen alegre y cuidada.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🎨</div>
+        <h3>Talleres y actividades</h3>
+        <p>Propuestas creativas para que los niños participen, jueguen y disfruten de forma activa.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">✨</div>
+        <h3>Animación y juegos</h3>
+        <p>Dinámicas pensadas para generar movimiento, risas y participación durante el evento.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="confianza" class="band">
+    <div class="split">
+      <div class="image-panel"></div>
+
+      <div class="quote-panel">
+        <h2>Niños disfrutando. Familias tranquilas.</h2>
+        <p>
+          En infantil no solo importa la diversión. También importan la confianza, la organización, la adaptación a cada edad y la sensación de que todo está cuidado.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="section-title">
+      <h2>Una rama alegre, visual y con mucho recorrido.</h2>
+      <p>
+        Infantil puede crecer dentro de Umbrela Teams conectando animación, decoración, community, contenido visual y futuras colaboraciones para eventos familiares.
+      </p>
+    </div>
+
+    <div class="grid grid-4">
+      <article class="card">
+        <div class="icon">🎂</div>
+        <h3>Celebración</h3>
+        <p>Cumpleaños, comuniones, fiestas familiares y momentos especiales.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🧩</div>
+        <h3>Actividad</h3>
+        <p>Juegos, talleres y propuestas adaptadas a cada grupo.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🌈</div>
+        <h3>Decoración</h3>
+        <p>Color, ambientación y detalles visuales que hagan memorable el evento.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">📸</div>
+        <h3>Contenido</h3>
+        <p>Imágenes, reels y piezas para alimentar la comunicación de Umbrela.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>La diferencia está en hacerlo fácil.</h2>
+      <p>
+        Muchas familias quieren celebrar algo bonito, pero no siempre tienen tiempo para organizarlo. Ahí aparece una oportunidad: resolver, decorar, animar y acompañar.
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <div class="icon">✓</div>
+        <h3>Comodidad</h3>
+        <p>Ayudar a que las familias no tengan que encargarse de todo desde cero.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">☀</div>
+        <h3>Cercanía</h3>
+        <p>Un trato humano, flexible y adaptado a cada celebración.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">↗</div>
+        <h3>Crecimiento</h3>
+        <p>Una línea con potencial para packs, colaboraciones y eventos cada vez más completos.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="final">
+    <div>
+      <h2>Crear momentos donde los niños disfrutan y las familias se despreocupan.</h2>
+      <p>Infantil Experience · Una rama de Umbrela Teams</p>
+      <br>
+      <a class="btn btn-primary" href="umbrela.html">Volver a Umbrela Teams</a>
+    </div>
+  </section>
+
+  <footer>
+    Infantil Experience · Umbrela Teams · Proyecto en desarrollo
+  </footer>
+
+</body>
+</html>
